@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(12, 16, 59), rgb(5, 6, 15));
+  overflow: hidden;
+}
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Animasi Bintang */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration) ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Animasi Komet */
+.comet {
+  position: absolute;
+  width: 190px;
+  height: 3.6px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(-45deg);
+  animation: comet 5s linear infinite;
+}
+
+@keyframes comet {
+  0% {
+    transform: translateX(-100vw) rotate(-45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) rotate(-45deg);
+    opacity: 0;
+  }
+}
+/* header */
+/*.header {
+  margin: 4% auto;
+}
+.header span {
+  font-weight: 800;
+  color: rgba(239, 239, 239, 1);
+}
+.header h3 {
+  color: rgba(239, 239, 239, 1);
+  font-size: 39.5px;
+  text-shadow: 0px 0px 1px, 0px 0px 1px, 0px 0px 1px,
+    0px 0px 1px rgba(255, 252, 167, 1);
+  text-align: center;
+  font-family: "poppins" sans-serif;
+  margin-bottom: 10px;
+}
+.header p {
+  text-align: center;
+  color: rgba(239, 239, 239, 1);
+  font-size: 18px;
+}*/
+
+/* web box link web */
+.link-web {
+  margin: 0px auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.box-web {
+  border: 1px solid rgba(255, 255, 255, 0.47);
+  margin: 6px;
+  box-shadow: 0px 0px 5.4px rgba(255, 255, 255, 0.93);
+  color: ghostwhite;
+  width: 372px;
+  max-width: 1000;
+  border-radius: 9.4px;
+  height: 48px;
+  margin: 4.8% auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.26);
+  position: relative;
+  color: rgba(212, 212, 212, 1);
+  transition: transform 0.5s ease, box-shadow 0.1s ease;
+}
+.box-web:hover {
+  background-color: rgba(0, 0, 0, 0.308);
+}
+@media (max-width: 800px) {
+  .box-web {
+    width: 400px;
+    overflow: hidden;
+  }
+}
+.box-web a {
+  text-decoration: none;
+  color: ghostwhite;
+}
+.box-web a:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+.box-web i {
+  position: absolute;
+  left: 11.4px;
+  margin: 9px;
+  transition: all 0.2s ease;
+}
+/* github account */
+.github i {
+  position: absolute;
+  margin: -9.6px;
+  left: 7.6%;
+  font-size: 22px;
+}
+/* Instagram account */
+.instagram i {
+  position: absolute;
+  margin: -9.5px;
+  left: 7.7%;
+  font-size: 21.7px;
+}
+/* github */
+.telegram i {
+  position: absolute;
+  margin: -10px;
+  left: 7.6%;
+  font-size: 22px;
+}
+/* user */
+.user i {
+  position: absolute;
+  margin: -9px;
+  left: 7.8%;
+  font-size: 20px;
+}
+/* tik tok */
+.tiktok i {
+  position: absolute;
+  margin: -9px;
+  left: 7.6%;
+  font-size: 20px;
+}
+
+.box-web i:hover {
+  transform: translateY(0px) scale(1.5);
+  color: rgb(226, 231, 225);
+}
+
+/* copy by azan emeng cta */
+.byweb {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 10px auto;
+  color: rgb(255, 255, 255);
+}
+.byweb p {
+  font-size: 14px;
+}
+
+.text {
+  text-align: center;
+  padding-top: 25px;
+  margin: 22px;
+  margin-bottom: 0px;
+}
+
+.animasi-text {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  height: 4.5rem;
+  overflow: hidden;
+  color: var(--accent-color);
+}
+
+.animasi-text span {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideFade 9s ease-in-out infinite;
+  color: #ffffff;
+}
+
+.animasi-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.animasi-text span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.animasi-text span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
